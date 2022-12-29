@@ -1,0 +1,46 @@
+*
+ {
+  box-sizing: border-box;
+}
+
+/* setting up variables */
+:root {
+  /* FONTS */
+  --ff: Roboto, sans-serif;
+  --ff-logo: Raleway, sans-serif;
+  --fs: 16px;
+
+  /* FONT COLORS */
+  --font-color-prim: #212121; /* 4: nav in header; h2 i h3, filters' buttons */
+  --font-color-sec: #757575; /* 4: contact mail&phone; p; */
+  --font-color-hover: #2196f3; /* 4: hover and logo "web" part*/
+  --font-color-white: #fff; /* 4: h1, button in h1, street, logo part header, portfolio-button:hover */
+  --font-color-black: #000; /* 4: logo-part footer,  */
+  --font-color-contact-footer: rgba(255, 255, 255, 0.6); /* 4: footer mail & phone */
+ 
+  /* BACKGROUND */
+  --bgcolor: #fff; /* main */
+  --bgcolor-dark: #2f303a; /* 4: banner & footer */
+  --bgcolor-fade: #f5f4fa; /* 4 "our team" section */
+  
+  /* BUTTONS BACKGROUND */
+  --bgcolor-button-prim: #2196f3;
+  --bgcolor-button-prim-hover: #1076c9; 
+  --bgcolor-button-sec: #f5f4fa;
+  --bgcolor-button-sec-hover: #2196f3;
+
+  /* BORDERS */
+  --border-header: 1px solid #ececec;
+  --border-porfolio-items: 1px solid #eeeeee;
+  --border-header: 1px solid #ececec;
+
+  /* || SHADOWS */
+  --shadow-team: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /* | SHADOW BUTTONS */
+  --shadow-button-primary: 0px 4px 4px 0px #00000026;
+
+  --shadow-button-menu-hover: 0px 2px 2px 0px #0000001f,
+    0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
+}
