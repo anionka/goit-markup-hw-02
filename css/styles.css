@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-/* setting up variables */
+/* setting up variables - fonts & colors' panels */
 :root {
   /* FONTS */
   --ff: Roboto, sans-serif;
@@ -24,23 +24,219 @@
   --bgcolor-fade: #f5f4fa; /* 4 "our team" section */
   
   /* BUTTONS BACKGROUND */
-  --bgcolor-button-prim: #2196f3;
-  --bgcolor-button-prim-hover: #1076c9; 
-  --bgcolor-button-sec: #f5f4fa;
-  --bgcolor-button-sec-hover: #2196f3;
+  --bgcolor-button-banner: #2196f3;
+  --bgcolor-button-banner-hover: #1076c9; 
+  --bgcolor-button-filter: #f5f4fa;
+  --bgcolor-button-filter-hover: #2196f3;
 
   /* BORDERS */
   --border-header: 1px solid #ececec;
   --border-porfolio-items: 1px solid #eeeeee;
-  --border-header: 1px solid #ececec;
-
-  /* || SHADOWS */
+  
+  /* SHADOWS */
   --shadow-team: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-  /* | SHADOW BUTTONS */
-  --shadow-button-primary: 0px 4px 4px 0px #00000026;
-
+  /* SHADOW BUTTONS */
+  --shadow-button: 0px 4px 4px 0px #00000026;
   --shadow-button-menu-hover: 0px 2px 2px 0px #0000001f,
     0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
+}
+  /* PSEUDOCLASSES */
+.hover:hover, .hover:focus-visible {
+  background-color: var(--bgcolor-button-filter-hover);
+  color: var(--font-color-white);
+  box-shadow: var(--shadow-button-menu-hover);
+}
+.banner__button:hover, .banner__button:focus-visible {
+  background-color: var(--bgcolor-button-banner-hover);
+}
+.link--hover:hover, .link--hover:focus-visible {
+  color: var(--font-color-contact-footer);
+}
+.link__header:hover, .link__header:focus-visible {
+  color: var(--font-color-hover)
+}
+
+/* general body settings */
+body {
+  margin: 0 auto;
+  width: 1600px;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  background-color: var(--bgcolor);
+}
+/* C1 rule broken */
+/* ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}  */
+
+.contact__list, .nav__list, .filters__list, .cards__list, .advantg__list, .scope__list, .team__list {
+  list-style: none;
+  list-style-type: none;
+}
+ .address__link, .address__street, .nav__link, .contact__link {
+  text-decoration: none;
+ }
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80px;
+  border-bottom: var(--border-header);
+}
+/* LOGO */
+.logo {
+  font-family: var(--ff-logo);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: calc(30.52/26);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.logo__prim {
+  color: var(--font-color-hover);
+}
+.logo__sec {
+  color: var(--font-color-black);
+}
+/* NAVIGATION */
+.nav__list, .contact__list {
+  display: flex;
+}
+.nav__list {
+  gap: 46px;
+}
+.contact__list {
+  gap: 50px;
+}
+.nav__link, .contact__link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: calc(16/14);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.nav__link {
+  color: var(--font-color-prim);
+}
+.contact__link {
+  color: var(--font-color-sec);
+}
+/* MAIN */
+  /* BANNER */
+.banner {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 94px;
+  height: 600px;
+  color: var(--font-color-sec);
+  text-align: center;
+  background-color: var(--bgcolor-dark);
+}
+    /* TITLE */
+.banner__title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1.364; /*calc(60/44) */
+  letter-spacing: 0.06em;
+  color:var(--font-color-white)
+}
+    /* BUTTON */
+.banner__button {
+  padding: 10px 41.5px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  color:#fff;
+  background-color: var(--bgcolor-button-banner);
+  box-shadow: var(--shadow-button);
+}
+ /* "NASZE ATUTY" SECTION */
+ /* układ flex do tuningu w HW3 */
+ .advantg__list {
+   display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+.advantg__item {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.advantgs__title {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+.advantg__text {
+  color: var(--font-color-sec);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+} 
+
+/* "czym się zajmujemy" section */
+.scope__title {
+ text-align: center; 
+} 
+.scope__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 94px;
+}
+
+/* "nasz zespół" section */
+.team__title {
+  text-align: center;
+}
+.team {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 648px;
+  background-color: var(--bgcolor-fade);
+}
+.team__list {
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+}
+.team__item {
+  display: flex;
+  flex-flow: column;
+  background-color: var(--bgcolor);
+  box-shadow: var(--shadow-team);
+}
+.team__img {
+  margin-bottom: 30px;
+}
+.team__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.188;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.team__profession {
+  color: var(--font-color-sec);
+  line-height: 1.188;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
