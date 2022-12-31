@@ -65,6 +65,7 @@ body {
   font-family: var(--ff);
   font-size: var(--fs);
   background-color: var(--bgcolor);
+  color: var(--font-color-prim)
 }
 /* C1 rule broken */
 /* ul {
@@ -123,7 +124,7 @@ a {
   font-weight: 500;
   line-height: calc(16/14);
   letter-spacing: 0.02em;
-  cursor: pointer;
+  /* cursor: pointer;  domyślnie w przeglądarce */
 }
 .nav__link {
   color: var(--font-color-prim);
@@ -265,6 +266,7 @@ a {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+  padding-inline-start: 0px;
   /* margin-left: 215px; */
 }
 .address__link {
