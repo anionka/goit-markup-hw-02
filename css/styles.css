@@ -14,8 +14,8 @@
   --font-color-prim: #212121; /* 4: nav in header; h2 i h3, filters' buttons */
   --font-color-sec: #757575; /* 4: contact mail&phone; p; */
   --font-color-hover: #2196f3; /* 4: hover and logo "web" part*/
-  --font-color-white: #fff; /* 4: h1, button in h1, street, logo part header, portfolio-button:hover */
-  --font-color-black: #000; /* 4: logo-part footer,  */
+  --font-color-white: #fff; /* 4: h1, button in h1, street, logo part footer, portfolio-button:hover */
+  --font-color-black: #000; /* 4: logo-part header,  */
   --font-color-contact-footer: rgba(255, 255, 255, 0.6); /* 4: footer mail & phone */
  
   /* BACKGROUND */
@@ -77,7 +77,7 @@ a {
   text-decoration: none;
 }  */
 
-.contact__list, .nav__list, .filters__list, .cards__list, .advantg__list, .scope__list, .team__list {
+.contact__list, .nav__list, .filters__list, .cards__list, .advantg__list, .scope__list, .team__list, .address__list {
   list-style: none;
   list-style-type: none;
 }
@@ -165,24 +165,24 @@ a {
 }
  /* "NASZE ATUTY" SECTION */
  /* układ flex do tuningu w HW3 */
- .advantg__list {
+ .assets__list {
    display: flex;
   align-items: center;
   justify-content: center;
  }
-.advantg__item {
+.assets__item {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
 }
-.advantgs__title {
+.assets__title {
   margin-bottom: 10px;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.03em;
 }
-.advantg__text {
+.assets__text {
   color: var(--font-color-sec);
   font-size: 0.875rem;
   line-height: 1.5;
@@ -224,6 +224,7 @@ a {
   background-color: var(--bgcolor);
   box-shadow: var(--shadow-team);
 }
+/* 2DO margins and padding - HW3 */ 
 .team__img {
   margin-bottom: 30px;
 }
@@ -239,4 +240,38 @@ a {
   line-height: 1.188;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 30px;
 }
+
+/* FOOTER */
+/* poprawić kursywę adresu! ALE JAK?? */
+.footer {
+  display: flex;
+  flex-flow: column;
+  height: 252px;
+  background-color: var(--bgcolor-dark);
+}
+.footer .logo  {
+  padding-top: 60px;
+  margin-left: 215px;
+}
+.footer .logo__sec-footer {
+  color: var(--font-color-white);
+}
+.address {
+  margin-left: 215px;
+  font-style: normal;
+}
+.address__list {
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
+.address__link {
+  color: var(--font-color-sec);
+}
+.address__street {
+  color: var(--font-color-white);
+}
+
+/* PORTFOLIO STYLES */
